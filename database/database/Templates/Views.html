@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Database</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="\">Insert Data <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">See Data</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+<div class="container col-md-8">
+    <form action='/Data' method='POST' > {% csrf_token %}
+      <div class="my-1"><h1>Registration Form :</h1></div>
+
+          <div class="form-row">
+            <div class="col">
+              <h3>First Name</h3>
+              <input type="text" class="form-control" name="Fname" placeholder="First name">
+            </div>
+            <div class="col">
+              <h3>Last Name</h3>
+              <input type="text" class="form-control" name="Lname" placeholder="Last name">
+            </div>
+          </div>
+            <div class="form-group mt-2">
+              <label for="exampleFormControlInput1"><h3>Email address</h3></label>
+              <input type="email" class="form-control" name="Email" id="exampleFormControlInput1" placeholder="Your Email id ">
+            </div>
+            <div class="form-group mt-n1">
+              <label for="exampleFormControlInput1"><h3>Address</h3></label>
+              <input class="form-control" name="Add" type="text" placeholder="Address">
+            </div>
+         <div class="form-row">
+            <div class="form-group col-md-6 my-n1">
+              <label for="inputCity"><h3>City</h3></label>
+              <input type="text" class="form-control" name="city" id="City" placeholder="City">
+            </div>
+            <div class="form-group col-md-4 my-n1">
+              <label for="inputState"><h3>Country</h3></label>
+              <select id="inputState" name="Country" class="form-control">
+                <option selected>Choose...</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>Bangladesh</option>
+                <option>China</option>
+                <option>Russia</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2 my-n1">
+              <label for="inputZip"><h3>Zip</h3></label>
+              <input type="text" class="form-control" name="Zip" id="inputZip" placeholder="Zip">
+            </div>
+         </div>
+             <div class="form-group col-md-6 my-3">
+              <label for="inputCity"><h3>Phone No:</h3></label>
+              <input type="text" class="form-control" name="Phone" id="inputCity" placeholder="Phone no">
+             </div>
+           <div class="form-group  col-md-12">
+               <label for id="exampleFormControlTextarea1"><h3>Feedback</h3></label>
+             <textarea class="form-control" name="Text" id="exampleFormControlTextarea1" rows="3" placeholder="FEEDBACK" style="margin-top: 0px; margin-bottom: 0px; height: 115px;"></textarea>
+               <div class="custom-control custom-switch mt-2">
+                  <input type="checkbox" name="Seedata" class="custom-control-input" id="customSwitch1">
+                 <label class="custom-control-label" for="customSwitch1"><h5>Store Data</h5></label><br>
+                </div>
+               <div class="container">
+                  <button type="submit" class="btn btn-danger col-md-6 mt-2 ml-n2"><h5>Submit</h5></button>
+               </div>
+            </div>
+    </form>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
